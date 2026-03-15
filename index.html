@@ -2,87 +2,178 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Joel list</title>
+<title>Joel List</title>
 
 <style>
+
 body{
-    font-family: Arial;
-    background:#111;
-    color:white;
     margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
 }
 
-header{
+/* header */
+
+.header{
     text-align:center;
-    padding:30px;
-    font-size:40px;
-    font-weight:bold;
+    padding:50px 20px 30px 20px;
 }
+
+.header h1{
+    margin:0;
+    font-size:42px;
+}
+
+.header p{
+    color:#777;
+}
+
+/* container */
+
+.container{
+    width:900px;
+    margin:auto;
+}
+
+/* list */
 
 .list{
-    max-width:900px;
-    margin:auto;
+    background:white;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
 }
 
 .entry{
     display:flex;
+    padding:18px 20px;
+    border-top:1px solid #eee;
     align-items:center;
-    padding:14px;
-    border-bottom:1px solid #333;
+}
+
+.entry:first-child{
+    border-top:none;
+}
+
+.entry:hover{
+    background:#fafafa;
+}
+
+/* rank auto numbering */
+
+.list{
+    counter-reset: rank;
+}
+
+.entry{
+    counter-increment: rank;
+}
+
+.rank::before{
+    content: "#" counter(rank);
 }
 
 .rank{
-    width:60px;
-    font-size:22px;
+    width:70px;
     font-weight:bold;
+    color:#cbb000;
+    font-size:18px;
 }
+
+/* level info */
 
 .level{
     flex:1;
+}
+
+.levelname{
     font-size:20px;
 }
 
 .creator{
-    color:#aaa;
-    margin-left:10px;
+    font-size:14px;
+    color:#777;
 }
 
+/* video link */
+
 .video a{
-    color:#4da6ff;
+    color:#3498db;
     text-decoration:none;
+    font-weight:bold;
 }
+
+.video a:hover{
+    text-decoration:underline;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>Joel list</header>
+<div class="header">
+<h1>Joel List</h1>
+<p>Levels beaten by Cubed_Cubed's pet, JOEL!!</p>
+</div>
+
+<div class="container">
 
 <div class="list">
 
 <div class="entry">
-<div class="rank">#1</div>
-<div class="level">joel level real <span class="creator">by ilikesnoodlesfr (me!)</span></div>
-<div class="video"><a href="https://www.twitch.tv/videos/2722089587">Video</a></div>
+<div class="rank"></div>
+
+<div class="level">
+<div class="levelname">Joel challenge real</div>
+<div class="creator">by ilikesnoodlesfr</div>
+</div>
+
+<div class="video">
+<a href="https://www.twitch.tv/videos/2722089587">VOD</a>
+</div>
+</div>
+
+<div class="entry">
+<div class="rank"></div>
+
+<div class="level">
+<div class="levelname">Polargeist</div>
+<div class="creator">by RobtopGames</div>
+</div>
+
+<div class="video">
+<a href="https://www.twitch.tv/videos/2721598680">VOD</a>
+</div>
+</div>
+
+<div class="entry">
+<div class="rank"></div>
+
+<div class="level">
+<div class="levelname">Stereo Madness</div>
+<div class="creator">by RobtopGames</div>
+</div>
+
+<div class="video">
+<a href="https://www.twitch.tv/videos/2721598680">VOD</a>
+</div>
 </div>
 
 
 <div class="entry">
-<div class="rank">#2</div>
-<div class="level">Polargeist <span class="creator">by Robtop</span></div>
-<div class="video"><a href="https://www.twitch.tv/videos/2721598680">Video</a></div>
+<div class="rank"></div>
+
+<div class="level">
+<div class="levelname">Retray</div>
+<div class="creator">by DiMaLiKuLov26</div>
 </div>
 
-<div class="entry">
-<div class="rank">#3</div>
-<div class="level">Stereo Madness <span class="creator">by Robtop</span></div>
-<div class="video"><a href="https://www.twitch.tv/videos/2721598680">Video</a></div>
+<div class="video">
+<a href="https://www.twitch.tv/videos/2721598680">VOD</a>
+</div>
 </div>
 
-<div class="entry">
-<div class="rank">#4</div>
-<div class="level">Retray <span class="creator">by DiMaViKuLov26</span></div>
-<div class="video"><a href="https://www.twitch.tv/videos/2721598680">Video</a></div>
 </div>
 
 </div>
